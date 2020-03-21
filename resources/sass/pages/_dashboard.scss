@@ -1,0 +1,98 @@
+.dashboard {
+    height: 100vh;
+    &__nav {
+        background: #252525;
+        padding: 1.8em 0;
+        &-list {
+            display: flex;
+            justify-content: center;
+        }
+        &-link a {
+            text-decoration: none;
+            display: block;
+            color: #fff;
+            padding: 0.8em 1.4em;
+        }
+    }
+    &__main {
+        padding: 1.8em;
+    }
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: grid;
+        row-gap: 20px;
+    }
+    &__item {
+        background: $primary-color;
+        border-radius: 0.25em;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-number {
+            font-size: 7em;
+            margin: auto;
+        }
+        &-description {
+            color: $secondary-color;
+            margin-top: 0;
+        }
+    }
+}
+
+.dashboard__nav-link--logout {
+    background: $primary-color;
+    border-radius: 0.25em;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.4em;
+    &__btn {
+        text-decoration: none;
+        background: $primary-color;
+        color: $secondary-color;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85em;
+        padding: 0.85em 1.3em;
+    }
+}
+
+.back-btn {
+    display: inline-block;
+    margin: 2em auto;
+}
+
+@media (min-width: 768px) {
+    .dashboard__list {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 80px;
+    }
+}
+@media (min-width: 1024px) {
+    .dashboard {
+        display: grid;
+        grid-template-columns: 1fr 4.5fr;
+        &__nav-list {
+            display: initial;
+        }
+        &__nav-link a {
+            padding: 1.2em;
+            transition: padding-left 0.4s ease;
+        }
+        &__nav-link:hover:not(.dashboard__nav-link--logout) a {
+            color: $primary-color;
+            padding-left: 2em;
+        }
+    }
+    .dashboard__nav-link--logout {
+        border-radius: 0;
+    }
+}

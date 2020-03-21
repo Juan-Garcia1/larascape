@@ -1,0 +1,64 @@
+.table {
+    width: 100%;
+    border-spacing: 0;
+    &__head {
+        background: $secondary-color;
+        color: $primary-color;
+    }
+    &__body {
+        background: #f0f0f0;
+    }
+    &__header {
+        text-align: left;
+    }
+    &__header,
+    &__data {
+        padding: 1.4em 1em;
+    }
+    &__data {
+        border-bottom: solid 1px #dbdbdb;
+    }
+    &__edit-link {
+        text-transform: capitalize;
+        color: $secondary-color;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.table__data--center {
+    text-align: center;
+}
+
+.table__delete-btn {
+    background: none !important;
+    color: $secondary-color !important;
+    &:hover {
+        color: red !important;
+    }
+}
+
+.pagination {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.page-item {
+    margin: 0 10px;
+}
+
+.page-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: $primary-color;
+}
+.page-item.disabled .page-link {
+    color: lightgray;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 14px;
+}

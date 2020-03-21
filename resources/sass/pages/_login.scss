@@ -1,0 +1,28 @@
+.login {
+    height: 100vh;
+    background: $secondary-color;
+    &__form-wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__form {
+        background: #4d4d4d;
+        padding: 2em 1.5em;
+    }
+    &__label-text {
+        color: #fff;
+    }
+    &__submit-btn {
+        width: 100% !important;
+        background: $primary-color !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .login__form {
+        width: 45%;
+        margin: auto;
+    }
+}
